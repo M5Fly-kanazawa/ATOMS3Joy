@@ -137,6 +137,31 @@ void setup() {
   delay(100);
 }
 
+uint8_t check_mode_change(void)
+{
+  uint8_t state;
+  static uint8_t flag =0;
+  state = 0;
+  if (flag==0)
+  {
+    if (getModeButton() == 1)
+    {
+      flag = 1;
+    }
+  }
+  else
+  {
+    if (getModeButton() == 0)
+    {
+      flag = 0;
+      state = 1;
+    }
+  }
+  USBSerial.printf("%d %d\n\r", state, flag);
+  return state;
+}
+
+
 void loop() {
   while(Loop_flag==0);
   Loop_flag = 0;
@@ -147,12 +172,12 @@ void loop() {
   M5.update();
   joy_update();
   
-  if (getModeButton() == 1)
+  if (check_mode_change() == 1)
   {
-    Mode+=1;
-    if(Mode>2)Mode=0;
+    if (Mode==ANGLECONTROL)Mode=RATECONTROL;
+    else Mode = ANGLECONTROL;
   }
- 
+
   uint16_t _throttle = getThrottle();
   uint16_t _phi = getAileron();
   uint16_t _theta = getElevator();
