@@ -185,7 +185,7 @@ void loop() {
 
   if(getArmButton()==1)
   {
-    Throttle_bias = _throttle;
+    //Throttle_bias = _throttle;
     Phi_bias = _phi;
     Theta_bias = _theta;
     Psi_bias = _psi;
