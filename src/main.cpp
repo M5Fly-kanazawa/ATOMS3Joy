@@ -37,7 +37,8 @@ uint8_t senddata[19];
 uint8_t disp_counter=0;
 
 //My StampFly MAC ADDRESS DC:54:75:C8:AD:5C
-const uint8_t addr[6] = {0xDC, 0x54, 0x75, 0xC8, 0xAD, 0x5C};
+//Orange DC:54:75:CE:A3:60
+const uint8_t addr[6] = {0xDC, 0x54, 0x75, 0xCE, 0xA3, 0x60};
 
 void rc_init(void);
 void data_send(void);
