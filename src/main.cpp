@@ -38,7 +38,8 @@ uint8_t disp_counter=0;
 
 //My StampFly MAC ADDRESS DC:54:75:C8:AD:5C
 //Orange DC:54:75:CE:A3:60
-const uint8_t addr[6] = {0xDC, 0x54, 0x75, 0xCE, 0xA3, 0x60};
+//New StampFly (bmi270 I2C version ) F4:12:FA:66:77:A4
+const uint8_t addr[6] = {0xF4, 0x12, 0xFA, 0x66, 0x77, 0xA4};
 
 void rc_init(void);
 void data_send(void);
