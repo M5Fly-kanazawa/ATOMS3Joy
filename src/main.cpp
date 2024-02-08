@@ -36,7 +36,7 @@ char data[140];
 uint8_t senddata[19];
 uint8_t disp_counter=0;
 
-//My StampFly MAC ADDRESS
+//StampFly MAC ADDRESS
 //1 F4:12:FA:66:80:54 (Yellow)
 const uint8_t addr[6] = {0xF4, 0x12, 0xFA, 0x66, 0x80, 0x54};
 
@@ -157,7 +157,7 @@ uint8_t check_mode_change(void)
       state = 1;
     }
   }
-  USBSerial.printf("%d %d\n\r", state, flag);
+  //USBSerial.printf("%d %d\n\r", state, flag);
   return state;
 }
 

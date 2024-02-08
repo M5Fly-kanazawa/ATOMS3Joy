@@ -18,10 +18,10 @@
 #define LEFTY (1)
 #define RIGHTX (2)
 #define RIGHTY (3)
-#define LEFT_STICK_BUTTON (0)
-#define RIGHT_STICK_BUTTON (1)
-#define LEFT_BUTTON (2)
-#define RIGHT_BUTTON (3)
+#define LEFT_STICK_BUTTON (2)
+#define RIGHT_STICK_BUTTON (3)
+#define LEFT_BUTTON (0)
+#define RIGHT_BUTTON (1)
 
 //Control Mapping
 #define THROTTLE RIGHTY
