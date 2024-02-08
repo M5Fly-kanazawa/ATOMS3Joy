@@ -12,7 +12,7 @@
 #define RATECONTROL 1
 #define ANGLECONTROL_W_LOG 2
 #define RATECONTROL_W_LOG 3
-#define CHANNEL (5)
+#define CHANNEL 1
 #define RESO10BIT (4096)
 
 esp_now_peer_info_t peerInfo;
@@ -36,10 +36,9 @@ char data[140];
 uint8_t senddata[19];
 uint8_t disp_counter=0;
 
-//My StampFly MAC ADDRESS DC:54:75:C8:AD:5C
-//Orange DC:54:75:CE:A3:60
-//New StampFly (bmi270 I2C version ) F4:12:FA:66:77:A4
-const uint8_t addr[6] = {0xF4, 0x12, 0xFA, 0x66, 0x77, 0xA4};
+//My StampFly MAC ADDRESS
+//1 F4:12:FA:66:80:54 (Yellow)
+const uint8_t addr[6] = {0xF4, 0x12, 0xFA, 0x66, 0x80, 0x54};
 
 void rc_init(void);
 void data_send(void);
@@ -68,7 +67,6 @@ void rc_init(void)
         return;
   }
   esp_wifi_set_channel(CHANNEL, WIFI_SECOND_CHAN_NONE);
-
 }
 
 //周期カウンタ割り込み関数
