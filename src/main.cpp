@@ -8,11 +8,12 @@
 #include <MadgwickAHRS.h>
 #include <atoms3joy.h>
 
+#define CHANNEL 1
+
 #define ANGLECONTROL 0
 #define RATECONTROL 1
 #define ANGLECONTROL_W_LOG 2
 #define RATECONTROL_W_LOG 3
-#define CHANNEL 1
 #define RESO10BIT (4096)
 
 esp_now_peer_info_t peerInfo;
